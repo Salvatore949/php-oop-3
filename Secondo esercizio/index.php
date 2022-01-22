@@ -13,12 +13,10 @@ public function __construct($name,$code){
     if( strlen($name) < 3 || strlen($name) > 16){
         throw new Exception("Is not correct the number of letters");
       }
-
       if(ctype_alnum($code)){
         throw new Exception("Is not correct the value you insert");
-      }  
-      
-    
+    }
+
 $this -> username = $name;
 $this -> password = $code;
 }
@@ -59,9 +57,8 @@ $this -> password = $code;
 
 }
 
-
 try{
-   $firstUser = new User ("Alessio", "foobar");
+   $firstUser = new User ("Albsio", "fo@@@@obar");
    $firstUser -> setUserAge("32");
    echo  $firstUser -> __toString();
 }
